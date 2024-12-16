@@ -51,3 +51,64 @@ Open your browser and navigate to `http://localhost:5173` (or the port number sp
 
 * If you encounter issues with dependencies, try running `npm install` or `yarn install` again.
 * If you encounter issues with the development server, try running `npm run dev` or `yarn dev` again.
+
+
+## 📦 Packages Used
+
+This project leverages a variety of libraries and tools to ensure scalability, maintainability, and a great developer experience.
+
+### **Core Libraries**
+- **`react`**: The core library for building user interfaces in a component-based architecture.
+- **`typescript`**: Type checking javascript
+
+---
+
+### **Form Management**
+- **`react-hook-form`**: For form validation.
+- **`@hookform/resolvers`**: Allows integration of external validation schemas, such as `Zod`, into `react-hook-form`.
+
+---
+
+### **Validation**
+- **`zod`**: A TypeScript-first schema validation library for handling input.
+
+---
+
+### **Routing**
+- **`react-router`**: Manages routing in the application.
+
+---
+
+### **State Management**
+- **`zustand`**: Easy-to-use state management library.
+
+---
+
+### **Data Fetching & Caching**
+- **`@tanstack/react-query`**: Data-fetching library that handles caching, synchronization, and background updates.
+
+---
+
+### **UI & Animation**
+- **`@radix-ui/react-tabs`**: Unstyled, accessible tabs components for building tab interfaces.
+- **`tailwind-merge`**: Ensures class merging behavior in Tailwind CSS when conditionally combining styles.
+- **`clsx`**: Utility for combining class names.
+
+---
+
+### **Charts & Visualizations**
+- **`recharts`**: For charts
+- **`react-minimal-pie-chart`**: For the pie chart; it's minimal
+
+---
+
+### **Carousel/Sliders**
+- **`react-slick`**: Used for building responsive sliders and carousels.
+
+---
+
+### **Data Persistence**
+- **`idb-keyval`**: storing info in indexDB
+
+Due to the time constraints, I use a couple of packages. Ideally, most components would be done form scratch.
+
