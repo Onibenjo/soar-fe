@@ -34,38 +34,36 @@ const users = [
   },
 ];
 
-export const QuickTransfer: React.FC = () => {
+export const QuickTransfer = () => {
   return (
-    <div className="space-y-5">
-      <h2 className="text-lg font-semibold mb-4">Quick Transfer</h2>
-      <div className="bg-white rounded-lg p-6 py-9 flex flex-col gap-y-7">
-        <Carousel />
+    <div className="bg-white rounded-lg py-1 flex flex-col gap-y-7">
+      <Carousel users={users} />
 
-        {/* Input Section */}
-        <div className="flex items-center space-x-3 w-full">
-          <label
-            htmlFor="amount"
-            className="text-gray-400 flex-1 flex-shrink-0">
-            Write Amount
-          </label>
-          <div className="rounded-[50px] bg-[#EDF1F7] text-gray-800 flex-1 flex">
-            <input
-              id="amount"
-              type="text"
-              className="bg-transparent outline-none border-none py-2 w-32 pl-7"
-            />
-            <button className="flex items-center space-x-3 px-6 py-4 bg-black text-white rounded-[50px] font-medium">
-              <span>Send</span>
-              <SendIcon />
-            </button>
-          </div>
+      {/* Input Section */}
+      <div className="flex items-center space-x-1 w-full">
+        <label htmlFor="amount" className="text-gray-400 flex-shrink-0">
+          Write Amount
+        </label>
+        <div className="rounded-[50px] bg-[#EDF1F7] text-gray-800 flex-1 flex justify-between max-w-60 space-x-1 w-full">
+          <input
+            id="amount"
+            type="text"
+            className="bg-transparent outline-none border-none py-2 pl-7 w-full"
+          />
+          <button className="flex items-center space-x-3 px-4 lg:px-6 py-2 lg:py-3 bg-black text-white rounded-[50px] font-medium">
+            <span>Send</span>
+            <SendIcon />
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-const Carousel: React.FC = () => {
+type CarouselProps = {
+  users: { id: number; name: string; role: string; image: string }[];
+};
+const Carousel = ({ users }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -78,7 +76,7 @@ const Carousel: React.FC = () => {
     <div className="relative">
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-500 items-start space-x-4 max-w-3xl pr-20"
+          className="flex transition-transform duration-500 items-start space-x-4 pr-20"
           style={{
             transform: `translateX(-${currentIndex * (100 / 3)}%)`,
           }}>

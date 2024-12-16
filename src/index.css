@@ -35,10 +35,11 @@
     --accent-foreground: 0 5% 10%;
     --destructive: 0 100% 30%;
     --destructive-foreground: 0 5% 90%;
-    --border: 0 30% 50%;
-    --input: 0 30% 18%;
+    --border: 180 20% 92%;
+    --input: 0 0% 100%;
     --ring: 0 0% 13.7%;
     --radius: 0.5rem;
+    --label: 0 0% 12%;
   }
   .dark  {
     --background: 0 50% 5%;

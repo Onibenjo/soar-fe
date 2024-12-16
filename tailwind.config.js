@@ -14,6 +14,7 @@ export default {
   		},
   		colors: {
   			background: 'hsl(var(--background))',
+  			label: 'hsl(var(--label))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
@@ -46,6 +47,7 @@ export default {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			black: '#232323',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',

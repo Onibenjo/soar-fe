@@ -43,45 +43,42 @@ const GradientContent: React.FC<IGradientContent> = ({ data }) => {
   );
 };
 
-export const BalanceHistoryChart: React.FC = () => {
+export const BalanceHistoryChart = () => {
   return (
-    <div className="">
-      <h2 className="text-lg font-semibold mb-4">Balance History</h2>
-      <div className="bg-white rounded-3xl p-4">
-        <ResponsiveContainer width="100%" height={250}>
-          <AreaChart data={data} margin={{ top: 20, bottom: 5 }}>
-            <defs>
-              <linearGradient id="grad3" x1="0" y1="0" x2="0" y2={`${100}%`}>
-                <GradientContent
-                  data={[
-                    { offset: "0%", color: "#2D60FF40" },
-                    { offset: "100%", color: "#2D60FF00" },
-                  ]}
-                />
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip />
+    <div className="bg-white rounded-3xl">
+      <ResponsiveContainer width="100%" height={200}>
+        <AreaChart data={data} margin={{ top: 20, bottom: 5 }}>
+          <defs>
+            <linearGradient id="grad3" x1="0" y1="0" x2="0" y2={`${100}%`}>
+              <GradientContent
+                data={[
+                  { offset: "0%", color: "#2D60FF40" },
+                  { offset: "100%", color: "#2D60FF00" },
+                ]}
+              />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
 
-            <Area
-              type="monotone"
-              dataKey="balance"
-              stroke="#1814F3"
-              fill="url(#grad3)"
-              strokeWidth={2}
-            />
-            <Line
-              type="monotone"
-              dataKey="balance"
-              stroke="#2B6CB0"
-              strokeWidth={2}
-              dot={false}
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
+          <Area
+            type="monotone"
+            dataKey="balance"
+            stroke="#1814F3"
+            fill="url(#grad3)"
+            strokeWidth={2}
+          />
+          <Line
+            type="monotone"
+            dataKey="balance"
+            stroke="#2B6CB0"
+            strokeWidth={2}
+            dot={false}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };
