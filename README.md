@@ -9,6 +9,18 @@
 * npm (version 6 or higher) or yarn (version 1 or higher)
 * A code editor or IDE of your choice
 
+## 🛠️ Technologies Used
+
+- React
+- Tailwind CSS
+- React Hook Form
+- React Router
+- Zustand (State Management)
+- Radix UI
+- Recharts
+- TanStack React Query
+
+
 ## Step 1: Clone the Repository
 -----------------------------
 
@@ -112,3 +124,24 @@ This project leverages a variety of libraries and tools to ensure scalability, m
 
 Due to the time constraints, I use a couple of packages. Ideally, most components would be done form scratch.
 
+
+
+---
+
+## 🚀 Features
+
+- Image upload and preview functionality.
+- Form validation using `react-hook-form` and `zod`.
+- Responsive and animated UI built with Tailwind CSS.
+- Data persistence using `idb-keyval` (IndexedDB).
+- State management with Zustand.
+- Data visualization using Recharts and Pie Charts.
+- Dynamic routing using React Router.
+- A11y assessable
+
+
+## 💡 Future Improvements
+
+- Add unit tests for all components.
+- Implement dark mode.
+- Integrate internationalization (i18n) for multiple languages.
