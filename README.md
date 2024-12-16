@@ -1,7 +1,6 @@
 # React + TypeScript + Vite
 
-# Running the React TS Vite App Locally
-=============================================
+## Running it Locally
 
 ## Prerequisites
 ---------------
@@ -45,18 +44,10 @@ yarn dev
 ## Step 4: Open the App in Your Browser
 --------------------------------------
 
-Open your browser and navigate to `http://localhost:5173` (or the port number specified in your `vite.config.js` file).
+Open your browser and navigate to `http://localhost:5173` (or the port number specified in `vite.config.js` file).
 
 ## Troubleshooting
 -----------------
 
 * If you encounter issues with dependencies, try running `npm install` or `yarn install` again.
 * If you encounter issues with the development server, try running `npm run dev` or `yarn dev` again.
-
-## Additional Tips
------------------
-
-* Make sure to update your `vite.config.js` file with your preferred settings.
-* Use a code editor or IDE with TypeScript support for better development experience.
-
-That's it! You should now be able to run your React TS Vite app locally.

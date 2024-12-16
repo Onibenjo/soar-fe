@@ -1,13 +1,32 @@
 import { PieChart as PieX } from "react-minimal-pie-chart";
+import { useExpenseStats } from "../../hooks/useExpenseStats";
 
-const data = [
-  { name: "Entertainment", value: 30, color: "#343C6A", shiftSize: 4 },
-  { name: "Bill Expense", value: 15, color: "#FC7900", shiftSize: 6 },
-  { name: "Others", value: 35, color: "#232323", shiftSize: 0 },
-  { name: "Investment", value: 20, color: "#396AFF", shiftSize: 2 },
-];
+const getChartData = (type: string) => {
+  switch (type) {
+    case "Entertainment":
+      return { color: "#343C6A", shiftSize: 4 };
+    case "Bill Expense":
+      return { color: "#FC7900", shiftSize: 6 };
+    case "Others":
+      return { color: "#232323", shiftSize: 0 };
+    case "Investment":
+      return { color: "#396AFF", shiftSize: 2 };
+
+    default:
+      return { color: "#343C6A", shiftSize: 4 };
+  }
+};
 
 export const ExpenseStatisticsChart = () => {
+  const { data: expenseStats } = useExpenseStats();
+
+  const data = expenseStats.map((stat) => {
+    return {
+      ...stat,
+      ...getChartData(stat.name),
+    };
+  });
+
   return (
     <div className="bg-white rounded-3xl py-1 flex justify-center items-center">
       <PieX

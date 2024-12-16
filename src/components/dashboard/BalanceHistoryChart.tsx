@@ -9,17 +9,7 @@ import {
   Area,
   AreaChart,
 } from "recharts";
-
-const data = [
-  { month: "Aug", balance: 400 },
-  { month: "Jul", balance: 200 },
-  { month: "Aug", balance: 400 },
-  { month: "Sep", balance: 350 },
-  { month: "Oct", balance: 800 },
-  { month: "Nov", balance: 600 },
-  { month: "Dec", balance: 350 },
-  { month: "Jan", balance: 700 },
-];
+import { useBalanceHistory } from "../../hooks/useBalanceHistory";
 
 interface IGradientData {
   offset: string;
@@ -44,6 +34,7 @@ const GradientContent: React.FC<IGradientContent> = ({ data }) => {
 };
 
 export const BalanceHistoryChart = () => {
+  const { data } = useBalanceHistory();
   return (
     <div className="bg-white rounded-3xl">
       <ResponsiveContainer width="100%" height={200}>
