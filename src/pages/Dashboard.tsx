@@ -11,6 +11,9 @@ import Slider from "react-slick";
 import React from "react";
 import { useCards } from "../hooks/useCards";
 
+// @ts-expect-error old typing from package
+const SliderComponent = Slider.default ? Slider.default : Slider;
+
 const slideSettings = {
   className: "slider variable-width",
   dots: false,
@@ -40,7 +43,7 @@ const Dashboard = () => {
               </Link>
             }>
             <div className="slider-container overflow-visible">
-              <Slider ref={sliderRef} {...slideSettings}>
+              <SliderComponent ref={sliderRef} {...slideSettings}>
                 {creditCards.map((card) => (
                   <div className="mr-8 h-60">
                     <CreditCard
@@ -53,7 +56,7 @@ const Dashboard = () => {
                     />
                   </div>
                 ))}
-              </Slider>
+              </SliderComponent>
             </div>
           </Container>
         </div>
