@@ -8,6 +8,7 @@ type CreditCardProps = {
   customerName: string;
   expiryDate: string;
   cardNo: string;
+  className?: string;
 };
 export const CreditCard = ({
   theme = "dark",
@@ -15,6 +16,7 @@ export const CreditCard = ({
   customerName,
   expiryDate,
   cardNo,
+  className,
 }: CreditCardProps) => {
   const isDark = theme === "dark";
   return (
@@ -24,7 +26,8 @@ export const CreditCard = ({
         {
           "bg-gradient-to-r from-[#5B5A6F] to-black": isDark,
           "border border-[#DFEAF2] bg-white": !isDark,
-        }
+        },
+        className
       )}>
       {/* Top Section */}
       <div className="px-6 pt-6 flex justify-between">

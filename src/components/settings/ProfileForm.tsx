@@ -109,7 +109,7 @@ const ProfileForm = () => {
         <div className="flex justify-end mt-10">
           <button
             type="submit"
-            className="bg-black text-white px-16 py-2 rounded-2xl hover:bg-gray-800 focus:outline-none w-full lg:w-auto">
+            className="bg-black text-white px-16 py-2 rounded-2xl hover:bg-gray-800 focus:outline-none w-full lg:w-auto transform hover:scale-[1.01] transition-all">
             Save
           </button>
         </div>

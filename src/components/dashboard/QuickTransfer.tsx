@@ -50,7 +50,7 @@ export const QuickTransfer = () => {
             type="text"
             className="bg-transparent outline-none border-none py-2 pl-7 w-full"
           />
-          <button className="flex items-center space-x-3 px-4 lg:px-6 py-2 lg:py-3 bg-black text-white rounded-[50px] font-medium">
+          <button className="flex items-center space-x-3 px-4 lg:px-6 py-2 lg:py-3 bg-black text-white rounded-[50px] font-medium transform hover:scale-105">
             <span>Send</span>
             <SendIcon />
           </button>
@@ -103,7 +103,7 @@ const Carousel = ({ users }: CarouselProps) => {
       <button
         title="next"
         onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-100 p-2 rounded-full shadow focus:outline-none hover:bg-gray-200 size-10 flex items-center justify-center flex-shrink-0">
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-100 p-2 rounded-full shadow focus:outline-none hover:bg-gray-200 size-10 flex items-center justify-center flex-shrink-0 hover:scale-105">
         <ArrowRightIcon />
       </button>
     </div>

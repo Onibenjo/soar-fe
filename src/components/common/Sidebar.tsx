@@ -80,7 +80,7 @@ export const Sidebar = ({
         </div>
         <button
           title="close"
-          className="font-bold outline-none border-none bg-transparent w-10 pr-4 xl:hidden"
+          className="font-bold outline-none border-none bg-transparent w-10 pr-4 xl:hidden transform hover:scale-105"
           onClick={toggleMobileMenu}>
           <svg
             viewBox="0 0 24 24"

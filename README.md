@@ -1,50 +1,62 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Running the React TS Vite App Locally
+=============================================
 
-Currently, two official plugins are available:
+## Prerequisites
+---------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Node.js (version 14 or higher)
+* npm (version 6 or higher) or yarn (version 1 or higher)
+* A code editor or IDE of your choice
 
-## Expanding the ESLint configuration
+## Step 1: Clone the Repository
+-----------------------------
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Clone the repository using your preferred method:
+```bash
+git clone https://github.com/Onibenjo/soar-fe.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Step 2: Install Dependencies
+-----------------------------
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Navigate to the project directory and install the dependencies:
+```bash
+npm install
 ```
+or
+```bash
+yarn install
+```
+
+## Step 3: Start the Development Server
+--------------------------------------
+
+Start the development server:
+```bash
+npm run dev
+```
+or
+```bash
+yarn dev
+```
+
+## Step 4: Open the App in Your Browser
+--------------------------------------
+
+Open your browser and navigate to `http://localhost:5173` (or the port number specified in your `vite.config.js` file).
+
+## Troubleshooting
+-----------------
+
+* If you encounter issues with dependencies, try running `npm install` or `yarn install` again.
+* If you encounter issues with the development server, try running `npm run dev` or `yarn dev` again.
+
+## Additional Tips
+-----------------
+
+* Make sure to update your `vite.config.js` file with your preferred settings.
+* Use a code editor or IDE with TypeScript support for better development experience.
+
+That's it! You should now be able to run your React TS Vite app locally.

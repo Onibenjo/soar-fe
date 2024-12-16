@@ -57,12 +57,12 @@ const Dashboard = () => {
             title="My Cards"
             addonEnd={
               <Link
-                className="text-[#343C6A] font-semibold"
-                to="/dashboard/my-cards">
+                className="text-[#343C6A] font-semibold transform hover:scale-[1.01] transition-all"
+                to="/dashboard/cards">
                 See All
               </Link>
             }>
-            <div className="slider-container">
+            <div className="slider-container overflow-visible">
               <Slider ref={sliderRef} {...slideSettings}>
                 {creditCards.map((card) => (
                   <div className="mr-8 h-60">
